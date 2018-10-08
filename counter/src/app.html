@@ -1,7 +1,9 @@
 <template>
+  <require from="./resources/value-converters/jsonvalueconverter"></require>
+  ${myObject | json}
   <compose view-model="hello" view.bind="hello.html" model.bind="{ target : 'World' }" mau.bind="mau"></compose>
   <input type="text" ref="textField">
   <a click.delegate="textField.focus()" href="#0">focus</a>
   <a href="#" click.delegate="textField.blur()">Blur</a>
-
+  <div>${myProp & oneTime}</div>
 </template>
